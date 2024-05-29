@@ -3,7 +3,28 @@ name = "password_generator"
 version = "0.1.0"
 edition = "2021"
 authors = ["Maurcio Sosa Giri <hola@mauricio.com.es>"]
+default-run = "password_generator_cli"
 
 [dependencies]
-rand = "0.8"
+pw_lib = { path = "pw_lib/" }
+cxx = "1.0.83"
+cxx-qt = "0.6.1"
+cxx-qt-lib = "0.6.1"
 
+[build-dependencies]
+cxx-qt-build = "0.6.1"
+
+[features]
+default = ["password_generator_cli"]
+password_generator_cli = []
+password_generator_qt = []
+password_generator_gtk = []
+
+[[bin]]
+
+name = "password_generator_cli"
+path = "password_generator_cli/src/main.rs"
+
+[[bin]]
+name = "password_generator_qt"
+path = "password_generator_qt/src/main.rs"

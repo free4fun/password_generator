@@ -1,0 +1,13 @@
+[package]
+name = "password_generator_cli_cli"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+pw_lib = { path = "../pw_lib" }
+
+[lib]
+name = "password_generator_cli"
+path = "src/main.rs"
+
+

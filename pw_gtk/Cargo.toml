@@ -1,0 +1,12 @@
+[package]
+name = "pw_gtk"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+gtk = "0.18.1"
+pw_lib = { path = "../pw_lib" }
+
+[lib]
+name = "pw_gtk"
+path = "src/pw_gtk.rs"

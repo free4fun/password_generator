@@ -1,0 +1,16 @@
+[package]
+name = "password_generator_qt"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+pw_lib = { path = "pw_lib/" }
+cxx = "1.0.83"
+cxx-qt = "0.6.1"
+cxx-qt-lib = "0.6.1"
+
+[build-dependencies]
+cxx-qt-build ="0.6.1"
+
+[build]
+path = "build.rs"
